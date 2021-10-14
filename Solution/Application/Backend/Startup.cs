@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore.SqlServer;
+using SmartLock.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace SmartLock
 {
@@ -21,7 +23,7 @@ namespace SmartLock
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            ConnectionString = configuration.GetConnectionString("ConnectionString");
+            ConnectionString = configuration.GetConnectionString("mssql");
         }
 
         public IConfiguration Configuration { get; }
@@ -31,8 +33,8 @@ namespace SmartLock
         {
 
             services.AddControllers();
-            services.AddDbContextPool<DatabaseContext>(options => 
-                options.UseSqlServer(Configuration.GetConnectionString("BlexzWebConnection")));
+            services.AddDbContext<DatabaseContext>(options => 
+                options.UseSqlServer(ConnectionString));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SmartLock", Version = "v1" });

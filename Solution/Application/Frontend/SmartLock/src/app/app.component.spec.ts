@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
+      imports: [ 
         RouterTestingModule
       ],
       declarations: [
@@ -26,7 +26,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('SmartLock');
   });
 
-  it('should render title', () => {
+  it('should render overview', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;

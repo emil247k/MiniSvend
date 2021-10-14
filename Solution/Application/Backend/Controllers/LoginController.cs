@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SmartLock.Models;
+using SmartLock.Models.User;
 
 namespace SmartLock.Controllers
 {

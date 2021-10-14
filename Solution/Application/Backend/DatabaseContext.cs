@@ -1,17 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 
-public class DatabaseContext : DbContext
+namespace SmartLock.Context
 {
-    public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
+    public class DatabaseContext : DbContext
     {
-    }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-    }
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-    }
-
-} 
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
+        {
+        }
+    } 
+}
