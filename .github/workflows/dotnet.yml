@@ -6,10 +6,8 @@ on:
   pull_request:
     branches: [ main ]
 env:
-      Solution_Name: SmartLock                
-      Test_Project_Path: your-test-project-path
-      Wap_Project_Directory: ./Solution/Application/Backend/
-      Wap_Project_Path: your-wap-project-path
+      Solution_Name: SmartLock
+      Wap_Project_Path: ./Solution/Application/Backend/SmartLock.csproj
 jobs:
   build:
 
