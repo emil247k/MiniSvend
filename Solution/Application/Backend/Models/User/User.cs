@@ -1,4 +1,5 @@
 using System;
+using SmartLock.Models;
 
 namespace SmartLock.Models.User
 {

@@ -23,7 +23,7 @@ namespace SmartLock
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            ConnectionString = configuration.GetConnectionString("mssql");
+            ConnectionString = configuration.GetConnectionString("Mssql");
         }
 
         public IConfiguration Configuration { get; }
@@ -33,6 +33,7 @@ namespace SmartLock
         {
 
             services.AddControllers();
+            Console.WriteLine(ConnectionString);
             services.AddDbContext<DatabaseContext>(options => 
                 options.UseSqlServer(ConnectionString));
             services.AddSwaggerGen(c =>

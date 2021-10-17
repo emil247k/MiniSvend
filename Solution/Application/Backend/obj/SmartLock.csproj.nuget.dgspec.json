@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MiniSvend\\Solution\\Application\\Backend\\SmartLock.csproj": {}
+    "W:\\MiniSvend\\Solution\\Application\\Backend\\SmartLock.csproj": {}
   },
   "projects": {
-    "D:\\MiniSvend\\Solution\\Application\\Backend\\SmartLock.csproj": {
+    "W:\\MiniSvend\\Solution\\Application\\Backend\\SmartLock.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MiniSvend\\Solution\\Application\\Backend\\SmartLock.csproj",
+        "projectUniqueName": "W:\\MiniSvend\\Solution\\Application\\Backend\\SmartLock.csproj",
         "projectName": "SmartLock",
-        "projectPath": "D:\\MiniSvend\\Solution\\Application\\Backend\\SmartLock.csproj",
-        "packagesPath": "C:\\Users\\emilo\\.nuget\\packages\\",
-        "outputPath": "D:\\MiniSvend\\Solution\\Application\\Backend\\obj\\",
+        "projectPath": "W:\\MiniSvend\\Solution\\Application\\Backend\\SmartLock.csproj",
+        "packagesPath": "C:\\Users\\Emil\\.nuget\\packages\\",
+        "outputPath": "W:\\MiniSvend\\Solution\\Application\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -19,7 +19,7 @@
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\emilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Emil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

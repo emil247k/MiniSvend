@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SmartLock.Models.User;
+using SmartLock.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace SmartLock.Controllers
 {
@@ -12,17 +14,27 @@ namespace SmartLock.Controllers
     [Route("[controller]")]
     public class LoginController : ControllerBase
     {
-        private readonly ILogger<LoginController> _logger;
-
-        public LoginController(ILogger<LoginController> logger)
+        private readonly ILogger<LoginController> logger;
+        private DatabaseContext databaseContext;
+        public LoginController(
+            ILogger<LoginController> logger,
+            DatabaseContext databaseContext)
         {
-            _logger = logger;
+            this.logger = logger;
+            this.databaseContext = databaseContext;
         }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> Login(LoginCredentials credentials)
         {
-            
+            var a = databaseContext.Set<User>().Add(new User(){
+                Username= "asd",
+                Name="asd",
+                LastName="asd",
+                Email="Email",
+                ShaID="ShaID"
+            });
+
             return Ok("somthing");
         }
     }
