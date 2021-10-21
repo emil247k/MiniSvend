@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using SmartLock.Models.User;
 using SmartLock.Context;
 using Microsoft.EntityFrameworkCore;
+using SmartLock.Services.User;
 
 namespace SmartLock.Controllers
 {
@@ -15,27 +16,34 @@ namespace SmartLock.Controllers
     public class LoginController : ControllerBase
     {
         private readonly ILogger<LoginController> logger;
-        private DatabaseContext databaseContext;
+        private ILoginService loginService;
         public LoginController(
             ILogger<LoginController> logger,
-            DatabaseContext databaseContext)
+            ILoginService loginService)
         {
             this.logger = logger;
-            this.databaseContext = databaseContext;
+            this.loginService = loginService;
         }
 
+        [Route("login")]
         [HttpPost]
         public async Task<IActionResult> Login(LoginCredentials credentials)
         {
-            var a = databaseContext.Set<User>().Add(new User(){
-                Username= "asd",
-                Name="asd",
-                LastName="asd",
-                Email="Email",
-                ShaID="ShaID"
-            });
+            return Ok(await loginService.Login(credentials));
+        }
 
-            return Ok("somthing");
+        [Route("signup")]
+        [HttpPost]
+        public async Task<IActionResult> SignUp(UserDetails details)
+        {
+            return Ok(await loginService.Signup(details));
+        }
+
+        [Route("logout")]
+        [HttpPost]
+        public async Task<IActionResult> Logout(string token)
+        {
+            return Ok(await loginService.Logout(token));
         }
     }
 }

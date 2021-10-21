@@ -11,5 +11,6 @@ namespace SmartLock.Models.User
         public string Username {get; set; }
         public string ShaID {get; set; }
         public DateTime LastLogin{get; set;}
+        public string ActivToken{get; set;}
     }
 }

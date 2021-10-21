@@ -4,7 +4,7 @@ namespace SmartLock.Models.User
 {
     public class LoginCredentials
     {
-        public string username;
-        public string shaID;
+        public string Username {get; set;}
+        public string ShaID {get; set;}
     }
 }

@@ -2,6 +2,7 @@ using SmartLock.Handler.User.Login;
 using SmartLock.Handler.User.Logout;
 using SmartLock.Handler.User.Signup;
 using SmartLock.Models.User;
+using System.Threading.Tasks;
 
 namespace SmartLock.Services.User
 {
@@ -20,19 +21,19 @@ namespace SmartLock.Services.User
             this.signupHandler = signupHandler;
         }
 
-        public string Login (LoginCredentials credentials)
+        public async Task<string> Login (LoginCredentials credentials)
         {
-            throw new System.Exception("Not implemented");
+            return await loginHandler.Handel(credentials);
         }
 
-        public bool Logout (string shaID)
+        public async Task<bool> Logout (string shaID)
         {
-            throw new System.Exception("Not implemented");
+            return await logoutHandler.Handel(shaID);
         }
 
-        public bool Signup (UserDetails userDetails)
+        public async Task<bool> Signup (UserDetails userDetails)
         {
-            throw new System.Exception("Not implemented");
+            return await signupHandler.Handel(userDetails);
         }
     }
 }

@@ -1,11 +1,12 @@
 using Microsoft.EntityFrameworkCore;
-using SmartLock.Models;
+using SmartLock.Models.User;
 
 namespace SmartLock.Context
 {
     public class DatabaseContext : DbContext
     {
-        public DbSet<DbModel> Models {get; set;}
+        public DbSet<User> users {get; set;}
+
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
         }

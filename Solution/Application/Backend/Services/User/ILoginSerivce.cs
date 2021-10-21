@@ -1,14 +1,15 @@
 using System;
 using SmartLock.Models.User;
+using System.Threading.Tasks;
 
 namespace SmartLock.Services.User
 {
     public interface ILoginService
     {
-        string Login (LoginCredentials credentials);
+        Task<string> Login (LoginCredentials credentials);
 
-        bool Logout (string shaID);
+        Task<bool> Logout (string shaID);
 
-        bool Signup (UserDetails userDetails);
+        Task<bool> Signup (UserDetails userDetails);
     }
 }
