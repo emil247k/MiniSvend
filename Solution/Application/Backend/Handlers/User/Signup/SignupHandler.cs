@@ -1,10 +1,10 @@
 using System;
-using SmartLock.Models.User;
+using SmartLock.Models.Users;
 using SmartLock.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace SmartLock.Handler.User.Signup
+namespace SmartLock.Handler.Users.Signup
 {
     public class SignupHandler : ISignupHandler
     {
@@ -16,7 +16,7 @@ namespace SmartLock.Handler.User.Signup
 
         public async Task<bool> Handel(UserDetails details)
         {
-            bool alreadyExists = await databaseContext.Set<SmartLock.Models.User.User>()
+            bool alreadyExists = await databaseContext.Set<User>()
                 .AnyAsync(x => x.Username == details.Username ||
                     x.Email == details.Email);
 
@@ -25,7 +25,7 @@ namespace SmartLock.Handler.User.Signup
                 throw new System.Exception("There already exists and account with that username or email");
             }
 
-            SmartLock.Models.User.User newUser = new SmartLock.Models.User.User
+            User newUser = new User
             {
                 Name = details.Name,
                 LastName = details.LastName,
@@ -34,7 +34,7 @@ namespace SmartLock.Handler.User.Signup
                 ShaID = details.ShaID
             };
 
-            await databaseContext.Set<SmartLock.Models.User.User>().AddAsync(newUser);
+            await databaseContext.Set<User>().AddAsync(newUser);
             return await databaseContext.SaveChangesAsync() > 0;
         }
     }

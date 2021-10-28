@@ -1,7 +1,7 @@
-using SmartLock.Models.User;
+using SmartLock.Models.Users;
 using System.Threading.Tasks;
 
-namespace SmartLock.Handler.User.Signup
+namespace SmartLock.Handler.Users.Signup
 {
     public interface ISignupHandler : IHandler<Task<bool>, UserDetails>
     {

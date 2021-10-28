@@ -4,4 +4,9 @@ namespace SmartLock.Handler
     {
         returnType Handel(parameterType value);
     }
+
+    public interface IHandler<returnType>
+    {
+        returnType Handel();
+    }
 }

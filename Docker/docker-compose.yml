@@ -10,10 +10,6 @@ services:
       ACCEPT_EULA: "Y"
   smart-lock-frontend-app:
     container_name: "smart-lock-frontend-app"
-    build: .
+    build: ../dockerfile
     ports:
-      - "4200:4200"
-    volumes:
-      - ../Solution/Application/Frontend/SmartLock:/data
-      - ./Scripts:/scripts
-    command: sh -c "./scripts/Script.sh"
+      - "6969:80"

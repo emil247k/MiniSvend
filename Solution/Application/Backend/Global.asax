@@ -6,7 +6,7 @@
     }  
     void Session_End(object sender, EventArgs e)  
     {  
-        databaseContext = DependencyResolver.Current.GetService<DatabaseContext>();  
+        var databaseContext = DependencyResolver.Current.GetService<DatabaseContext>();  
         sessionContext = DependencyResolver.Current.GetService<SessionContext>();
         string token = sessionContext.getToken("token");
         SmartLock.Models.User.User user = await databaseContext.Set<SmartLock.Models.User.User>()

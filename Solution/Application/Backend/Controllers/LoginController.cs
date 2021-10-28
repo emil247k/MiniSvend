@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SmartLock.Models.User;
+using SmartLock.Models.Users;
 using SmartLock.Context;
 using Microsoft.EntityFrameworkCore;
-using SmartLock.Services.User;
+using SmartLock.Services.Users;
 
 namespace SmartLock.Controllers
 {

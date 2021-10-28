@@ -1,7 +1,7 @@
 using System;
 using SmartLock.Models;
 
-namespace SmartLock.Models.User
+namespace SmartLock.Models.Users
 {
     public class User : DbModel
     {
