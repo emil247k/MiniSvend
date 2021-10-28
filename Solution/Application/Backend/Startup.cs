@@ -14,11 +14,10 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using SmartLock.Context;
 using Microsoft.EntityFrameworkCore;
-using SmartLock.Services.User;
-using SmartLock.Handler.User.Login;
-using SmartLock.Handler.User.Logout;
-using SmartLock.Handler.User.Signup;
-using Microsoft.AspNetCore.Http;
+using SmartLock.Services.Users;
+using SmartLock.Handler.Users.Login;
+using SmartLock.Handler.Users.Logout;
+using SmartLock.Handler.Users.Signup;
 
 namespace SmartLock
 {

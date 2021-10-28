@@ -1,7 +1,6 @@
-using SmartLock.Models.User;
 using System.Threading.Tasks;
 
-namespace SmartLock.Handler.User.Logout
+namespace SmartLock.Handler.Users.Logout
 {
     public interface ILogoutHandler : IHandler<Task<bool>, string>
     {

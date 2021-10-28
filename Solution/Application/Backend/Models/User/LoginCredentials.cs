@@ -1,6 +1,6 @@
 using System;
 
-namespace SmartLock.Models.User
+namespace SmartLock.Models.Users
 {
     public class LoginCredentials
     {

@@ -1,8 +1,8 @@
 using System;
-using SmartLock.Models.User;
+using SmartLock.Models.Users;
 using System.Threading.Tasks;
 
-namespace SmartLock.Services.User
+namespace SmartLock.Services.Users
 {
     public interface ILoginService
     {

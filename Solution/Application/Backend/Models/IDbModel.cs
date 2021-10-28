@@ -4,7 +4,7 @@ namespace SmartLock.Models
 {
     public interface IDbModel
     {
-        int Id {get; set;}
+        long Id {get; set;}
         DateTime LastUpdate {get; set;}
     }
 }

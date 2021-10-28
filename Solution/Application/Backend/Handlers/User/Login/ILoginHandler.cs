@@ -1,8 +1,8 @@
 using System;
-using SmartLock.Models.User;
+using SmartLock.Models.Users;
 using System.Threading.Tasks;
 
-namespace SmartLock.Handler.User.Login
+namespace SmartLock.Handler.Users.Login
 {
     public interface ILoginHandler : IHandler<Task<string>, LoginCredentials>
     {

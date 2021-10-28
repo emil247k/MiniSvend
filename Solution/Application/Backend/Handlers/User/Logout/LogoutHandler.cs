@@ -1,12 +1,12 @@
 using System;
-using SmartLock.Models.User;
+using SmartLock.Models.Users;
 using SmartLock.Context;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 
-namespace SmartLock.Handler.User.Logout
+namespace SmartLock.Handler.Users.Logout
 {
     public class LogoutHandler : ILogoutHandler
     {
@@ -22,7 +22,7 @@ namespace SmartLock.Handler.User.Logout
         public async Task<bool> Handel(string shaID)
         {
             string token = sessionContext.getToken("token");
-            SmartLock.Models.User.User user = await databaseContext.Set<SmartLock.Models.User.User>()
+            User user = await databaseContext.Set<User>()
                 .FirstOrDefaultAsync(x => x.ActivToken == token);
             if(user != default)
             {

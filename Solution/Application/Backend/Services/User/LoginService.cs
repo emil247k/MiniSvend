@@ -1,10 +1,10 @@
-using SmartLock.Handler.User.Login;
-using SmartLock.Handler.User.Logout;
-using SmartLock.Handler.User.Signup;
-using SmartLock.Models.User;
+using SmartLock.Handler.Users.Login;
+using SmartLock.Handler.Users.Logout;
+using SmartLock.Handler.Users.Signup;
+using SmartLock.Models.Users;
 using System.Threading.Tasks;
 
-namespace SmartLock.Services.User
+namespace SmartLock.Services.Users
 {
     public class LoginService: ILoginService
     {
