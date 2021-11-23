@@ -1,6 +1,4 @@
-using SmartLock.Handler.Users.Login;
-using SmartLock.Handler.Users.Logout;
-using SmartLock.Handler.Users.Signup;
+using SmartLock.Handler.Users;
 using SmartLock.Models.Users;
 using System.Threading.Tasks;
 

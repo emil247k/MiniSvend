@@ -1,4 +1,4 @@
-namespace Backend.Models.User
+namespace SmartLock.Models.Users
 {
     public enum AuthorizeCallType
     {

@@ -9,13 +9,13 @@ using System.Net.Http.Headers;
 using System;
 using SmartLock.Commands.Locks;
 
-namespace SmartLock.Handler.locks.PersonalLockHandler
+namespace SmartLock.Handler.Locks
 {
-    public class PersonalLockHandler : IPersonalLockHandler
+    public class UpdateLockStateHandler : IUpdateLockStateHandler
     {
         private DatabaseContext databaseContext;
         private ISessionContext sessionContext;
-        public PersonalLockHandler(
+        public UpdateLockStateHandler(
             DatabaseContext databaseContext,
             ISessionContext sessionContext)
         {
@@ -23,7 +23,7 @@ namespace SmartLock.Handler.locks.PersonalLockHandler
             this.sessionContext = sessionContext;
         }
 
-        public async Task<bool> Handel(PersonalLockCommand value)
+        public async Task<bool> Handel(UpdateLockStateCommand value)
         {
             var sessionToken = sessionContext.getToken("token");
             var currentUser = await databaseContext.Set<User>().SingleAsync(x => x.ActivToken == sessionToken);

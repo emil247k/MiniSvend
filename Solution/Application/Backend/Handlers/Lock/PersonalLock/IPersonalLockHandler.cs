@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using SmartLock.Commands.Locks;
 
-namespace SmartLock.Handler.locks.PersonalLockHandler
+namespace SmartLock.Handler.Locks
 {
-    public interface IPersonalLockHandler : IHandler<Task<bool>, PersonalLockCommand>
+    public interface IUpdateLockStateHandler : IHandler<Task<bool>, UpdateLockStateCommand>
     {
 
     }

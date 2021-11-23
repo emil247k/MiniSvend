@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using SmartLock.Commands.Locks;
 
-namespace SmartLock.Handler.locks.LockRemoveAccessHandler
+namespace SmartLock.Handler.Locks
 {
     public class LockRemoveAccessHandler : ILockRemoveAccessHandler
     {

@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-namespace SmartLock.Handler.locks.NewLockHandler
+namespace SmartLock.Handler.Locks
 {
     public class NewLockHandler : INewLockHandler
     {

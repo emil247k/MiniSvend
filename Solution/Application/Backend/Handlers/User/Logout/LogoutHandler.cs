@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 
-namespace SmartLock.Handler.Users.Logout
+namespace SmartLock.Handler.Users
 {
     public class LogoutHandler : ILogoutHandler
     {

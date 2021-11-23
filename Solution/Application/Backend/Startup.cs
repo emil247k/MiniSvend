@@ -15,9 +15,9 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 using SmartLock.Context;
 using Microsoft.EntityFrameworkCore;
 using SmartLock.Services.Users;
-using SmartLock.Handler.Users.Login;
-using SmartLock.Handler.Users.Logout;
-using SmartLock.Handler.Users.Signup;
+using SmartLock.Handler.Users;
+using SmartLock.Services.Locks;
+using SmartLock.Handler.Locks;
 
 namespace SmartLock
 {
@@ -36,7 +36,6 @@ namespace SmartLock
         {
             services.AddControllers();
             services.AddHttpContextAccessor();
-            Console.WriteLine(ConnectionString);
             services.AddDistributedMemoryCache();
             services.AddSession(options =>
             {
@@ -48,16 +47,24 @@ namespace SmartLock
                 options.UseSqlServer(ConnectionString));
             services.AddSwaggerGen(c =>
             {
+                c.ResolveConflictingActions(x => x.First());
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SmartLock", Version = "v1" });
             });
+            
             services.AddScoped<ILoginHandler, LoginHandler>();
             services.AddScoped<ILogoutHandler, LogoutHandler>();
             services.AddScoped<ISignupHandler, SignupHandler>();
             services.AddScoped<ILoginService, LoginService>();
+            services.AddScoped<ILockAddAccessHandler, LockAddAccessHandler>();
+            services.AddScoped<ILockDetailsHandler, LockDetailsHandler>();
+            services.AddScoped<ILockRemoveAccessHandler, LockRemoveAccessHandler>();
+            services.AddScoped<INewLockHandler, NewLockHandler>();
+            services.AddScoped<IUpdateLockStateHandler, UpdateLockStateHandler>();
+            services.AddScoped<IUserLocksHandler, UserLocksHandler>();
+            services.AddScoped<ILockService, LockService>();
             services.AddScoped<ISessionContext, SessionContext>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

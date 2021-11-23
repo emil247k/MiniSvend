@@ -1,7 +1,7 @@
 using SmartLock.Commands.Locks;
 using System.Threading.Tasks;
 
-namespace SmartLock.Handler.locks.NewLockHandler
+namespace SmartLock.Handler.Locks
 {
     public interface INewLockHandler : IHandler<Task<bool>, NewLockCommand>
     {

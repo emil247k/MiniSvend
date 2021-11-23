@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Linq;
 
-namespace SmartLock.Handler.Users.Login
+namespace SmartLock.Handler.Users
 {
     public class LoginHandler : ILoginHandler
     {

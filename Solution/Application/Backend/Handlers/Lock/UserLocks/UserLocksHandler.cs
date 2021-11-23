@@ -6,7 +6,7 @@ using SmartLock.Models.Users;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace SmartLock.Handler.locks.UserLocksHandler
+namespace SmartLock.Handler.Locks
 {
     public class UserLocksHandler : IUserLocksHandler
     {

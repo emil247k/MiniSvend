@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using SmartLock.Commands.Locks;
 
-namespace SmartLock.Handler.locks.LockRemoveAccessHandler
+namespace SmartLock.Handler.Locks
 {
     public interface ILockRemoveAccessHandler : IHandler<Task<bool>, LockRemoveAccessCommand>
     {

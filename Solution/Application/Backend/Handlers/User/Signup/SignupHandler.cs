@@ -4,7 +4,7 @@ using SmartLock.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace SmartLock.Handler.Users.Signup
+namespace SmartLock.Handler.Users
 {
     public class SignupHandler : ISignupHandler
     {
